@@ -1,4 +1,4 @@
-Wigo Palavras - Android source candidate 3.13.1 (30022)
+Wigo Palavras - Android signed candidate 3.13.1 (30023)
 Independent Wigo Tecnologia adaptation of Lexica. Not an official Lexica release.
 Original code and dictionary credits/licenses are retained in this repository.
 Modified source: https://github.com/lopesclayton/lexica
@@ -26,7 +26,6 @@ B61725113438B7C1A563472E9FC68D0A6A4D0894B662595C1650B0B58E6C86A0
 NOT store-approved or published. Compilation, signature and bundletool validation
 passed. Existing unit tests: 41 executed without failures, 1 skipped; those tests
 do not validate the new credential gate. Runtime gate/gameplay/lifecycle tests,
-independent launcher artwork,
 store declarations and listing remain pending. Do not present this as final.
 
 Source30021: invitation installation text now uses the current Wigo application
@@ -40,3 +39,12 @@ Source30022: About includes the Wigo modified-source repository and a local
 EN/PT independence/license explanation. Original project/credits entry retained.
 Both repository links use the same parental gate; privacy remains unrestricted.
 The signed30021 package above does not include this latest About change.
+
+Candidate30023: original Wigo letter-tile launcher vector replaces the upstream
+launcher reference. Original upstream artwork remains preserved in the source.
+Includes the About/source-link changes from30022 and invitation changes from30021.
+Release bundle build, strict signing verification and bundletool validation passed.
+SHA256: 198F5057AFA24E1958204A080BF35CEAE0119B9897099633DE26313C481FA3AD
+Target SDK36; no advertising components in the merged release manifest.
+Runtime credential-gate, recreation, gameplay and rendered-device checks remain
+pending. This is a signed validation candidate, not a published production app.

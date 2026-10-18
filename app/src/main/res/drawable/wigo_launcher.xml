@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original Wigo letter-tile mark, GPL-3.0-or-later. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#102C55" android:pathData="M0,0H108V108H0Z" />
+    <path android:fillColor="#1B66AE" android:pathData="M0,72L108,18V108H0Z" />
+    <path android:fillColor="#F5FAFF" android:pathData="M24,24H51V51H24Z M57,24H84V51H57Z M24,57H51V84H24Z" />
+    <path android:fillColor="#67DAF0" android:pathData="M57,57H84V84H57Z" />
+    <path android:fillColor="#00000000" android:strokeColor="#102C55" android:strokeWidth="3"
+        android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M29,32L32,44L37.5,37L43,44L46,32 M66,31H75 M70.5,31V44 M66,44H75 M44,64H33V77H44V71H39 M65,64H76V77H65Z" />
+</vector>
