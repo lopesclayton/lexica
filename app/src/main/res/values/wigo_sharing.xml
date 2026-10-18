@@ -1,0 +1,4 @@
+<resources>
+    <string name="wigo_install_invite">Install %1$s: https://play.google.com/store/apps/details?id=%2$s</string>
+    <string name="wigo_web_invite">Or open this compatible challenge in the original Lexica web game (external project, beta):</string>
+</resources>

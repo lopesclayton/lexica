@@ -1,4 +1,4 @@
-Wigo Palavras - Android candidate 3.13.1 (30020)
+Wigo Palavras - Android source candidate 3.13.1 (30021)
 Independent Wigo Tecnologia adaptation of Lexica. Not an official Lexica release.
 Original code and dictionary credits/licenses are retained in this repository.
 Modified source: https://github.com/lopesclayton/lexica
@@ -20,11 +20,16 @@ translations were replaced; other translated entries remain unchanged.
 
 Policy: https://s3.sa-east-1.amazonaws.com/lupper.com.br/politica-privacidade-jogos.html
 Contact: contato@lupper.com.br
-Signed candidate SHA256:
+Previous signed candidate 30020 SHA256 (does NOT contain the invitation fix):
 B61725113438B7C1A563472E9FC68D0A6A4D0894B662595C1650B0B58E6C86A0
 
 NOT store-approved or published. Compilation, signature and bundletool validation
 passed. Existing unit tests: 41 executed without failures, 1 skipped; those tests
 do not validate the new credential gate. Runtime gate/gameplay/lifecycle tests,
-independent launcher artwork, in-app modified-source link, invitation branding,
+independent launcher artwork, in-app modified-source link,
 store declarations and listing remain pending. Do not present this as final.
+
+Source30021: invitation installation text now uses the current Wigo application
+name and package ID. The compatible external web option is explicitly attributed
+to original Lexica. SharedGameData serialization and parental gating unchanged.
+EN/PT templates checked statically; new final AAB and runtime checks pending.

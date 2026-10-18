@@ -129,9 +129,9 @@ class ScoreActivity : AppCompatActivity() {
                 
                 $uri
                 
-                ${getString(R.string.invite__dont_have_lexica_installed)}
+                ${getString(R.string.wigo_install_invite, getString(R.string.app_name), packageName)}
                 
-                ${getString(R.string.invite__dont_have_lexica_installed_web)}
+                ${getString(R.string.wigo_web_invite)}
                 
                 $webUri
             """.trimIndent()
