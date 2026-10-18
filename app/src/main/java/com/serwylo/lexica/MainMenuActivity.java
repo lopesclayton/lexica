@@ -79,10 +79,18 @@ public class MainMenuActivity extends AppCompatActivity {
 
         binding.about.setOnClickListener(v -> new androidx.appcompat.app.AlertDialog.Builder(this)
                 .setTitle(R.string.app_name)
-                .setItems(new String[]{getString(R.string.wigo_privacy_policy), getString(R.string.wigo_original_project)}, (dialog, which) -> {
+                .setItems(new String[]{getString(R.string.wigo_privacy_policy), getString(R.string.wigo_original_project),
+                        getString(R.string.wigo_modified_source), getString(R.string.wigo_adaptation)}, (dialog, which) -> {
+                    if (which == 3) {
+                        new androidx.appcompat.app.AlertDialog.Builder(this)
+                                .setTitle(R.string.app_name).setMessage(R.string.wigo_adaptation_details)
+                                .setPositiveButton(android.R.string.ok, null).show();
+                        return;
+                    }
                     String url = which == 0
                             ? "https://s3.sa-east-1.amazonaws.com/lupper.com.br/politica-privacidade-jogos.html"
-                            : "https://github.com/lexica/lexica";
+                            : which == 1 ? "https://github.com/lexica/lexica"
+                            : "https://github.com/lopesclayton/lexica";
                     try {
                         Intent external = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                         if (which == 0) startActivity(external); // Privacy remains freely accessible.

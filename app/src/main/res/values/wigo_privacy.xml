@@ -2,4 +2,7 @@
 <resources>
     <string name="wigo_privacy_policy">Privacy policy</string>
     <string name="wigo_original_project">Original project and credits</string>
+    <string name="wigo_modified_source">Wigo source code (GPL v3+)</string>
+    <string name="wigo_adaptation">About this adaptation</string>
+    <string name="wigo_adaptation_details">Wigo Palavras is an independent adaptation of Lexica by Wigo Tecnologia, not an official release or an endorsement by the original authors. Original code and dictionary credits are preserved in the source repository. The modified source is available under GPL v3 or later through the Wigo source code menu. External links require parental confirmation; the privacy policy is always accessible.</string>
 </resources>

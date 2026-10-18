@@ -11,7 +11,7 @@ android {
         applicationId = "com.wigotecnologia.game.lexica"
         minSdkVersion 21
         targetSdkVersion 36
-        versionCode = 30021
+        versionCode = 30022
         versionName = "3.13.1"
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'

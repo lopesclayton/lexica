@@ -2,4 +2,7 @@
 <resources>
     <string name="wigo_privacy_policy">Política de privacidade</string>
     <string name="wigo_original_project">Projeto original e créditos</string>
+    <string name="wigo_modified_source">Código-fonte Wigo (GPL v3+)</string>
+    <string name="wigo_adaptation">Sobre esta adaptação</string>
+    <string name="wigo_adaptation_details">Wigo Palavras é uma adaptação independente do Lexica pela Wigo Tecnologia, não uma versão oficial nem endossada pelos autores originais. Os créditos originais do código e dos dicionários estão preservados no repositório. O código modificado está disponível sob GPL v3 ou posterior pelo menu Código-fonte Wigo. Links externos exigem confirmação do responsável; a política de privacidade permanece acessível.</string>
 </resources>
