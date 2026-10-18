@@ -32,4 +32,6 @@ store declarations and listing remain pending. Do not present this as final.
 Source30021: invitation installation text now uses the current Wigo application
 name and package ID. The compatible external web option is explicitly attributed
 to original Lexica. SharedGameData serialization and parental gating unchanged.
-EN/PT templates checked statically; new final AAB and runtime checks pending.
+EN/PT templates checked statically. Signed candidate30021 built and verified:
+CDDE008675D38EFD0C1FEFB1E5A42E90590732BB657CEDC1A50C2668B432005C
+Runtime checks and publication remain pending; this is not a final release.
