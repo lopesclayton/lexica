@@ -1,0 +1,6 @@
+<resources>
+    <string name="wigo_parent_title">Parental control</string>
+    <string name="wigo_parent_message">Parent or guardian: confirm the Android screen-lock PIN or password to open this external action.</string>
+    <string name="wigo_parent_blocked">External action blocked. A parent or guardian must configure a secure Android screen lock. Android 6 or newer is required.</string>
+    <string name="wigo_external_unavailable">No application is available to open this action.</string>
+</resources>

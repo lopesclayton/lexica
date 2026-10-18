@@ -72,7 +72,7 @@
     <string name="prefs">प्राथमिकताएँ</string>
     <string name="restore_game">खेल रीस्टोर करें</string>
     <string name="new_game">नया खेल</string>
-    <string name="app_name">लेक्सिका</string>
+    <string name="app_name">Wigo Palavras</string>
     <string name="game_mode_beginner">शुरुआती</string>
     <string name="game_mode_letter_points_description">कम उपयोग किए जाने वाले अक्षरों का उपयोग करके ज़्यादा पॉयंट स्कोर करें</string>
     <plurals name="num_minutes">

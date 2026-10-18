@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Lexica</string>
+    <string name="app_name">Wigo Palavras</string>
     <string name="new_game">新遊戲</string>
     <string name="restore_game">返回遊戲</string>
     <string name="prefs">偏好設定</string>

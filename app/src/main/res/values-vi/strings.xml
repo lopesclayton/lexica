@@ -135,7 +135,7 @@
     <string name="prefs">Cài đặt</string>
     <string name="restore_game">Khôi phục trò chơi</string>
     <string name="new_game">Trò chơi mới</string>
-    <string name="app_name">Lexica</string>
+    <string name="app_name">Wigo Palavras</string>
     <string name="dialog_end_game_confirm_message">Bạn có chắc bạn muốn kết thúc trò chơi này không\?</string>
     <string name="dialog_end_game_confirm_title">Kết thúc trò chơi</string>
     <string name="pref_dict_pt_BR_no_diacritics" tools:keep="@string/pref_dict_pt_BR_no_diacritics">Tiếng Bồ Đào Nha (Brazil)</string>

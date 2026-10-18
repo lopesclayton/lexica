@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <string name="app_name">Лексика</string>
+    <string name="app_name">Wigo Palavras</string>
     <string name="about">Относно</string>
     <string name="button_ok">OK</string>
     <string name="dialog_about_title">Относно Lexica</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">லெக்சிகா</string>
+    <string name="app_name">Wigo Palavras</string>
     <string name="pref_dict_pt_BR_description" tools:keep="@string/pref_dict_br_BR_description">டயாக்ரிடிக்ச் அடங்கும்: çáéííóúàààôà மற்றும் கடிதங்கள்: KWY</string>
     <string name="lexicon_is_in_beta">பீட்டா</string>
     <string name="pref_boardSize">போர்டு அளவு</string>

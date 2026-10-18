@@ -276,7 +276,7 @@ public class GameActivity extends AppCompatActivity implements Synchronizer.Fina
         final Bundle bundleWithSavedGame = new Bundle();
         game.save(new GameSaverTransient(bundleWithSavedGame));
 
-        Intent scoreIntent = new Intent("com.serwylo.lexica.action.SCORE");
+        Intent scoreIntent = new Intent("com.serwylo.lexica.action.SCORE").setPackage(getPackageName());
         scoreIntent.putExtras(bundleWithSavedGame);
         return scoreIntent;
     }

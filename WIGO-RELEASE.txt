@@ -1,0 +1,30 @@
+Wigo Palavras - Android candidate 3.13.1 (30020)
+Independent Wigo Tecnologia adaptation of Lexica. Not an official Lexica release.
+Original code and dictionary credits/licenses are retained in this repository.
+Modified source: https://github.com/lopesclayton/lexica
+Upstream base: 4a71963b78e359677a054f0e924b3d1c9fefbc9a
+
+Build: JDK21, Android SDK36, included Gradle8.14.2 wrapper.
+Command: gradlew.bat :app:bundleRelease
+Output: app/build/outputs/bundle/release/app-release.aab
+Use your own signing key. Wigo private signing material is not distributed.
+Application ID: com.wigotecnologia.game.lexica
+Min SDK21; external parental actions require SDK23+ and a secure device lock.
+No AdMob added. No publisher account is needed for local gameplay.
+
+Changes: Wigo app name, own Android application ID, current-package scoping for
+internal game intents, freely accessible privacy policy, transient one-use
+device-credential gate for external credits, dictionaries and sharing actions.
+Parental authorization is not persisted across recreation. Original app-name
+translations were replaced; other translated entries remain unchanged.
+
+Policy: https://s3.sa-east-1.amazonaws.com/lupper.com.br/politica-privacidade-jogos.html
+Contact: contato@lupper.com.br
+Signed candidate SHA256:
+B61725113438B7C1A563472E9FC68D0A6A4D0894B662595C1650B0B58E6C86A0
+
+NOT store-approved or published. Compilation, signature and bundletool validation
+passed. Existing unit tests: 41 executed without failures, 1 skipped; those tests
+do not validate the new credential gate. Runtime gate/gameplay/lifecycle tests,
+independent launcher artwork, in-app modified-source link, invitation branding,
+store declarations and listing remain pending. Do not present this as final.

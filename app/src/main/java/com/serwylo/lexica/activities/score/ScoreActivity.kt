@@ -138,7 +138,7 @@ class ScoreActivity : AppCompatActivity() {
             putExtra(Intent.EXTRA_TEXT, text)
         }
 
-        startActivity(Intent.createChooser(sendIntent, getString(R.string.send_challenge_invite_to)))
+        com.serwylo.lexica.ParentalExternalAction.start(this, Intent.createChooser(sendIntent, getString(R.string.send_challenge_invite_to)))
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

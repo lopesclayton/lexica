@@ -5,13 +5,13 @@ apply plugin: 'kotlin-parcelize'
 apply plugin: 'de.mobilej.unmock'
 
 android {
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.serwylo.lexica"
+        applicationId = "com.wigotecnologia.game.lexica"
         minSdkVersion 21
-        targetSdkVersion 35
-        versionCode = 30018
+        targetSdkVersion 36
+        versionCode = 30020
         versionName = "3.13.1"
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'

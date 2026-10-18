@@ -60,7 +60,7 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.newGame.setOnClickListener(v -> {
-            Intent intent = new Intent("com.serwylo.lexica.action.NEW_GAME");
+            Intent intent = new Intent("com.serwylo.lexica.action.NEW_GAME").setPackage(getPackageName());
             intent.putExtra("gameMode", gameMode);
             intent.putExtra("lang", language.getName());
             startActivity(intent);
@@ -73,16 +73,25 @@ public class MainMenuActivity extends AppCompatActivity {
         binding.languageButton.setOnClickListener(v -> startActivity(new Intent(this, ChooseLexiconActivity.class)));
 
         if (savedGame()) {
-            binding.restoreGame.setOnClickListener(v -> startActivity(new Intent("com.serwylo.lexica.action.RESTORE_GAME")));
+            binding.restoreGame.setOnClickListener(v -> startActivity(new Intent("com.serwylo.lexica.action.RESTORE_GAME").setPackage(getPackageName())));
             binding.restoreGame.setEnabled(true);
         }
 
-        binding.about.setOnClickListener(v -> {
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            Uri u = Uri.parse("https://github.com/lexica/lexica");
-            i.setData(u);
-            startActivity(i);
-        });
+        binding.about.setOnClickListener(v -> new androidx.appcompat.app.AlertDialog.Builder(this)
+                .setTitle(R.string.app_name)
+                .setItems(new String[]{getString(R.string.wigo_privacy_policy), getString(R.string.wigo_original_project)}, (dialog, which) -> {
+                    String url = which == 0
+                            ? "https://s3.sa-east-1.amazonaws.com/lupper.com.br/politica-privacidade-jogos.html"
+                            : "https://github.com/lexica/lexica";
+                    try {
+                        Intent external = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        if (which == 0) startActivity(external); // Privacy remains freely accessible.
+                        else ParentalExternalAction.start(this, external);
+                    } catch (android.content.ActivityNotFoundException unavailable) {
+                        new androidx.appcompat.app.AlertDialog.Builder(this)
+                                .setMessage(url).setPositiveButton(android.R.string.ok, null).show();
+                    }
+                }).setNegativeButton(android.R.string.cancel, null).show());
 
         binding.newMultiplayerGame.setOnClickListener(v -> {
             startActivity(new Intent(this, NewMultiplayerActivity.class));

@@ -137,12 +137,12 @@ $humanReadable
                 putExtra(Intent.EXTRA_TEXT, text)
             }
 
-            startActivity(Intent.createChooser(sendIntent, getString(R.string.send_multiplayer_invite_to)))
+            com.serwylo.lexica.ParentalExternalAction.start(this, Intent.createChooser(sendIntent, getString(R.string.send_multiplayer_invite_to)))
         }
 
         binding.startGame.isEnabled = true
         binding.startGame.setOnClickListener {
-            val intent = Intent("com.serwylo.lexica.action.NEW_GAME").apply {
+            val intent = Intent("com.serwylo.lexica.action.NEW_GAME").setPackage(packageName).apply {
                 putExtra("gameMode", gameMode)
                 putExtra("lang", language.name)
                 putExtra("board", board.toTypedArray())

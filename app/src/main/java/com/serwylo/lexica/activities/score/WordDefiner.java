@@ -46,7 +46,7 @@ public class WordDefiner {
         }
 
         if (intent != null && intent.resolveActivity(context.getPackageManager()) != null) {
-            context.startActivity(intent);
+            com.serwylo.lexica.ParentalExternalAction.start(context, intent);
         } else {
             searchWordOnline(word);
         }
@@ -57,7 +57,7 @@ public class WordDefiner {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         Uri u = Uri.parse(String.format(url, word));
         intent.setData(u);
-        context.startActivity(intent);
+        com.serwylo.lexica.ParentalExternalAction.start(context, intent);
     }
 }
 

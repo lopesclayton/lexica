@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lexica</string>
+    <string name="app_name">Wigo Palavras</string>
     <string name="new_game">新しいゲーム</string>
     <string name="restore_game">ゲームを復元</string>
     <string name="prefs">設定</string>

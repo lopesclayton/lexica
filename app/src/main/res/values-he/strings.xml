@@ -72,7 +72,7 @@
     <string name="prefs">העדפות</string>
     <string name="restore_game">שחזור משחק</string>
     <string name="new_game">משחק חדש</string>
-    <string name="app_name">Lexica</string>
+    <string name="app_name">Wigo Palavras</string>
     <string name="pref_dict_hr_HR" tools:keep="@string/pref_dict_hr">קרואטית</string>
     <string name="pref_dict_pt_BR" tools:keep="@string/pref_dict_pt_BR">פורטוגלית ברזילאית (מורחבת)</string>
     <string name="pref_dict_ru_extended" tools:keep="@string/pref_dict_ru_extended">רוסית (מורחבת)</string>

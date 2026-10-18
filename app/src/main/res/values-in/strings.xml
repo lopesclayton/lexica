@@ -31,7 +31,7 @@
     <string name="pref_dict_it" tools:keep="@string/pref_dict_it">Italia</string>
     <string name="pref_dict_ja" tools:keep="@string/pref_dict_ja">Jepang</string>
     <string name="prefs">Preferensi</string>
-    <string name="app_name">Lexica</string>
+    <string name="app_name">Wigo Palavras</string>
     <string name="new_game">Permainan Baru</string>
     <string name="pref_dict_ru" tools:keep="@string/pref_dict_ru">Rusia</string>
     <string name="pref_dict_en_GB" tools:keep="@string/pref_dict_en_GB">Inggris (Inggris Raya)</string>

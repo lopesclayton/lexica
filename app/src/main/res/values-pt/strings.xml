@@ -72,7 +72,7 @@
     <string name="prefs">Preferências</string>
     <string name="restore_game">Restaurar Jogo</string>
     <string name="new_game">Novo Jogo</string>
-    <string name="app_name">Lexica</string>
+    <string name="app_name">Wigo Palavras</string>
     <plurals name="num_minutes">
         <item quantity="one">%d min</item>
         <item quantity="other">%d mins</item>

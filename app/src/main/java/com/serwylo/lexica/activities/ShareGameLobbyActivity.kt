@@ -90,7 +90,7 @@ class ShareGameLobbyActivity : AppCompatActivity() {
     }
 
     private fun startGame(language: Language, gameMode: GameMode, board: List<String>) {
-        val intent = Intent("com.serwylo.lexica.action.NEW_GAME").apply {
+        val intent = Intent("com.serwylo.lexica.action.NEW_GAME").setPackage(packageName).apply {
             putExtra("gameMode", gameMode)
             putExtra("lang", language.name)
             putExtra("board", board.toTypedArray())
