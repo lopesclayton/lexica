@@ -67,6 +67,7 @@ class ScoreActivity : AppCompatActivity() {
 
         binding = ScoreBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        com.serwylo.lexica.WigoWindowInsets.apply(this)
 
         val game = initialiseGame(savedInstanceState)
         this.game = game

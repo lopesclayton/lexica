@@ -40,6 +40,7 @@ class HighScoresActivity : AppCompatActivity() {
 
         binding = HighScoresBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        com.serwylo.lexica.WigoWindowInsets.apply(this)
 
         binding.highScoreList.layoutManager = LinearLayoutManager(this)
         binding.highScoreList.setHasFixedSize(true)

@@ -26,6 +26,7 @@ class ChooseLexiconActivity : AppCompatActivity() {
         val binding = ChooseLexiconBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+        WigoWindowInsets.apply(this)
 
         binding.lexiconList.adapter = Adapter()
         binding.lexiconList.layoutManager = LinearLayoutManager(this)

@@ -1,4 +1,4 @@
-Wigo Palavras - Android signed candidate 3.13.1 (30023)
+Wigo Palavras - Android candidate 3.13.1 (30024)
 Independent Wigo Tecnologia adaptation of Lexica. Not an official Lexica release.
 Original code and dictionary credits/licenses are retained in this repository.
 Modified source: https://github.com/lopesclayton/lexica
@@ -48,3 +48,21 @@ SHA256: 198F5057AFA24E1958204A080BF35CEAE0119B9897099633DE26313C481FA3AD
 Target SDK36; no advertising components in the merged release manifest.
 Runtime credential-gate, recreation, gameplay and rendered-device checks remain
 pending. This is a signed validation candidate, not a published production app.
+
+Source30024 (2026-10-20): main menu letter tiles now identify WIGO PALAVRAS.
+The title has an accessibility label and adapts to its actual view bounds.
+Android15+ activity layouts account for system bars, display cutouts and the
+keyboard; system icons follow the theme background luminance. Earlier Android
+window behavior and gameplay/storage rules are unchanged.
+Debug tests: 44 executed successfully, 1 skipped. API36 emulator verified menu,
+gameplay layout, save/restore across an APK update, and score layout.
+The gesture trial did not establish successful word recognition.
+Positive credential authorization, cancellation/recreation, additional devices,
+store assets/declarations and release-candidate runtime checks remain pending.
+Release30024 signed AAB SHA256:
+06024F70A23635CF9493B36A4AA71B591B983694D1F36E7D41E9141FCA8719AE
+Strict signature verification and bundletool validation passed; release unit
+tests: 44 executed successfully, 1 skipped. A locally debug-signed universal
+APK derived from this AAB opened successfully on the API36 emulator.
+Publishing corresponding source does not mean the Android app is published.
+Never describe this candidate as store-approved or publicly available.

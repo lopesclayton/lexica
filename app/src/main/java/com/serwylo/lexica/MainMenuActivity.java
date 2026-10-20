@@ -58,6 +58,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
         SplashBinding binding = SplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        WigoWindowInsets.apply(this);
 
         binding.newGame.setOnClickListener(v -> {
             Intent intent = new Intent("com.serwylo.lexica.action.NEW_GAME").setPackage(getPackageName());

@@ -56,6 +56,7 @@ public class GameActivity extends AppCompatActivity implements Synchronizer.Fina
         ThemeManager.getInstance().applyTheme(this);
 
         setContentView(R.layout.game);
+        WigoWindowInsets.apply(this);
 
         gameWrapper = findViewById(R.id.game_wrapper);
         toolbar = findViewById(R.id.toolbar);

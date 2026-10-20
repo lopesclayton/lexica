@@ -35,6 +35,7 @@ class NewMultiplayerActivity : AppCompatActivity() {
 
         binding = NewMultiplayerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        com.serwylo.lexica.WigoWindowInsets.apply(this)
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

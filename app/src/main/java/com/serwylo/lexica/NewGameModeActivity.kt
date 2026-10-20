@@ -27,6 +27,7 @@ class NewGameModeActivity : AppCompatActivity() {
 
         binding = NewGameModeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        WigoWindowInsets.apply(this)
         setSupportActionBar(binding.toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

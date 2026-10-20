@@ -24,6 +24,7 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
 
         SettingsBinding binding = SettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        WigoWindowInsets.apply(this);
 
         setSupportActionBar(binding.toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -30,6 +30,7 @@ class ChooseGameModeActivity : AppCompatActivity() {
 
         binding = ChooseGameModeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        WigoWindowInsets.apply(this)
 
         binding.gameModeList.layoutManager = LinearLayoutManager(this)
         binding.gameModeList.setHasFixedSize(false)

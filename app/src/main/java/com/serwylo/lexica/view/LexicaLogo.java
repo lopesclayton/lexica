@@ -17,7 +17,6 @@
 
 package com.serwylo.lexica.view;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -25,7 +24,6 @@ import android.graphics.Picture;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.util.DisplayMetrics;
 import android.view.View;
 
 import com.serwylo.lexica.R;
@@ -40,6 +38,7 @@ public class LexicaLogo extends View {
 
     private Picture cached;
     private final ThemeProperties theme;
+    static final String[] TITLE_ROWS = {"WIGO", "PALAVRAS"};
 
     public LexicaLogo(Context context) {
         this(context, null);
@@ -55,6 +54,8 @@ public class LexicaLogo extends View {
         cached = null;
 
         theme = new ThemeProperties(context, attrs, defStyle);
+        setContentDescription(context.getString(R.string.app_name));
+        setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
     }
 
     /**
@@ -88,6 +89,7 @@ public class LexicaLogo extends View {
 
     @Override
     public void onDraw(Canvas canvas) {
+        if (getWidth() <= 0 || getHeight() <= 0) return;
         if (cached == null) {
             int height = getHeight();
             int width = getWidth();
@@ -97,6 +99,16 @@ public class LexicaLogo extends View {
         }
 
         cached.draw(canvas);
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        cached = null;
+    }
+
+    static int titleTileSize(int width, int height, int padding) {
+        return Math.max(0, Math.min((width - 9 * padding) / 8, (height - 3 * padding) / 2));
     }
 
     private void drawOnCanvas(Canvas canvas) {
@@ -109,12 +121,8 @@ public class LexicaLogo extends View {
         int height = getHeight();
         int width = getWidth();
 
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        ((Activity) getContext()).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int deviceHeight = displayMetrics.heightPixels;
-        int deviceWidth = displayMetrics.widthPixels;
-
-        int size = Math.min(deviceHeight, deviceWidth) / 8;
+        int size = Math.min(height, width) / 8;
+        if (size <= 0) return;
         p.setTextSize(size * 8f / 10f);
 
         // Find vertical center offset
@@ -126,37 +134,30 @@ public class LexicaLogo extends View {
 
         for (int i = 0; i < 20; i++) {
             String l = LETTERS[rng.nextInt(LETTERS.length)];
-            int x = rng.nextInt(width - size - 10) + 5;
-            int y = rng.nextInt(height - size - 10) + 5;
+            int x = rng.nextInt(Math.max(1, width - size - 10)) + 5;
+            int y = rng.nextInt(Math.max(1, height - size - 10)) + 5;
 
             drawTile(canvas, p, l, BoxColor.BACKGROUND, x, y, size, offset);
         }
 
-        int outerPadding = paddingSize * 2;
-        int totalInnerPadding = paddingSize * 5;
-
-        size = (Math.min(deviceHeight, deviceWidth) - outerPadding - totalInnerPadding) / 6;
+        size = titleTileSize(width, height, paddingSize);
+        if (size <= 0) return;
         p.setTextSize(size * 8f / 10f);
 
         // Find vertical center offset
         p.getTextBounds("A", 0, 1, textBounds);
         offset = textBounds.exactCenterY();
 
-        int totalWidthOfTiles = 6 * size;
-        int y = (height - size) / 2;
-        int dx = (width - totalWidthOfTiles - outerPadding) / 5 + size;
-        int x = paddingSize;
-        drawTile(canvas, p, "L", BoxColor.MAIN, x, y, size, offset);
-        x += dx;
-        drawTile(canvas, p, "E", BoxColor.MAIN, x, y, size, offset);
-        x += dx;
-        drawTile(canvas, p, "X", BoxColor.MAIN, x, y, size, offset);
-        x += dx;
-        drawTile(canvas, p, "I", BoxColor.MAIN, x, y, size, offset);
-        x += dx;
-        drawTile(canvas, p, "C", BoxColor.MAIN, x, y, size, offset);
-        x += dx;
-        drawTile(canvas, p, "A", BoxColor.MAIN, x, y, size, offset);
+        int y = (height - 2 * size - paddingSize) / 2;
+        for (String row : TITLE_ROWS) {
+            int rowWidth = row.length() * size + (row.length() - 1) * paddingSize;
+            int x = (width - rowWidth) / 2;
+            for (int i = 0; i < row.length(); i++) {
+                drawTile(canvas, p, row.substring(i, i + 1), BoxColor.MAIN, x, y, size, offset);
+                x += size + paddingSize;
+            }
+            y += size + paddingSize;
+        }
 
     }
 

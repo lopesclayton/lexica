@@ -32,6 +32,7 @@ class FoundWordsActivity : AppCompatActivity() {
 
         binding = FoundWordsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        com.serwylo.lexica.WigoWindowInsets.apply(this)
 
         binding.foundWordsList.layoutManager = GridLayoutManager(this, calcNumColumns())
         binding.foundWordsList.setHasFixedSize(true)
